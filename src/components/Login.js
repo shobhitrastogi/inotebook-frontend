@@ -44,7 +44,7 @@ const Login = () => {
     <input type="password" className="form-control"name='password' minLength={5} required onChange={onChange} value={credentials.password} id="password"/>
   </div>
   
-  <button type="submit" className="btn btn-primary" >Submit</button>
+  <button type="submit" className="btn btn-dark" >Submit</button>
 </form>
   </>
   )

@@ -55,7 +55,7 @@ const Signup = () => {
     <input type="cpassword"className="form-control" name='cpassword' onChange={onChange} id="cpassword"/>
   </div>
  
-  <button type="submit"className="btn btn-primary">Submit</button>
+  <button type="submit"className="btn btn-dark">Submit</button>
 </form>
   </>
   )
