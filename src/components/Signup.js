@@ -41,7 +41,7 @@ const Signup = () => {
   <div className="mb-3 container" > 
   <div className="mb-3">
     <label htmlFor="name"className="form-label">Name</label>
-    <input type="name"className="form-control" id="name" name='name'  onChange={onChange}/>
+    <input type="text"className="form-control" id="name" name='name'  onChange={onChange}/>
   </div>
     <label htmlFor="email"className="form-label">Email address</label>
     <input type="email"className="form-control" id="email" name='email' aria-describedby="emailHelp" onChange={onChange}/>
@@ -53,7 +53,7 @@ const Signup = () => {
   </div>
   <div className="mb-3">
     <label htmlFor="password"className="form-label">ConfirmPassword</label>
-    <input type="cpassword"className="form-control" name='cpassword' onChange={onChange} id="cpassword"/>
+    <input type="password"className="form-control" name='cpassword' onChange={onChange} id="cpassword"/>
   </div>
  
   <button type="submit"className="btn btn-dark">Submit</button>
