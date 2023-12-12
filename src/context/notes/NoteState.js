@@ -2,13 +2,12 @@
 import React, { useState } from 'react'
 import NoteContext from './noteContext';
  const NoteState =(props)=>{
-  // const host = "http://localhost:5000"
-  const host = "https://inotebook-xaja.onrender.com"
+  const host = "http://localhost:5000"
      const noteInitial= [
      ]
 
       const [ notes,setNotes]  =useState(noteInitial)
- 
+
      // Get a note
      const getNotes=async( )=>{
       // api call 
@@ -19,9 +18,9 @@ import NoteContext from './noteContext';
           "Content-Type": "application/json",
           "auth-token": localStorage.getItem("token")
         },
-        
+
       });
-      
+
       const json = await response.json()
       console.log(json)
       setNotes(json)
@@ -89,7 +88,7 @@ import NoteContext from './noteContext';
         console.log(newNotes)
           setNotes(newNotes)
       }
-   
+
     return (
         <NoteContext.Provider value = {{notes,addNote,deleteNote,editNote,getNotes}}>
          {props.children}

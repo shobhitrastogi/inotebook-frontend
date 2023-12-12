@@ -29,7 +29,7 @@ const Notes = () => {
       editNote(note.id, note.etitle, note.edescription, note.etag)
       refClose.current.click();
   }
-  
+
   const onChange = (e)=>{
       setNote({...note, [e.target.name]: e.target.value})
   }

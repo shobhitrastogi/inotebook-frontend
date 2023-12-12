@@ -24,15 +24,10 @@ function App() {
         </div>
     </Router>
    </NoteState>    
-      
-    
+
+
   </>
   );
 }
 
 export default App;
-
-
-
-
-

@@ -7,7 +7,7 @@ const Login = () => {
   let navigate = useNavigate();
     const handleClick=async(e)=>{
      e.preventDefault();
-      const url= "https://inotebook-xaja.onrender.com/api/auth/login"
+      const url= "http://localhost:5000/api/auth/login"
      const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -16,7 +16,7 @@ const Login = () => {
         body:JSON.stringify({email:credentials.email,password:credentials.password})
       });
       const json =await response.json()
-    
+
       if(json.success){
 
         // save the auth token and redirect 
@@ -25,7 +25,7 @@ const Login = () => {
       } else{
         // kuch ni
       }   
-     
+
       console.log(json)
     }
     const onChange= (e)=>{
@@ -43,8 +43,8 @@ const Login = () => {
     <label htmlFor="password" className="form-label">Password</label>
     <input type="password" className="form-control"name='password' minLength={5} required onChange={onChange} value={credentials.password} id="password"/>
   </div>
-  
-  <button type="submit" className="btn btn-dark" >Submit</button>
+
+  <button type="submit" className="btn btn-primary" >Submit</button>
 </form>
   </>
   )

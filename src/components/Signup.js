@@ -10,8 +10,7 @@ const Signup = () => {
   const handleClick=async(e)=>{
       const {name,email,password}=credentials
      e.preventDefault();
-     const url = 'https://inotebook-xaja.onrender.com/api/auth/createuser';
-
+      const url= "http://localhost:5000/api/auth/createuser"
      const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -28,7 +27,7 @@ const Signup = () => {
       } else{
         // kuch ni
       }
-    
+
       console.log(json)
     }
     const onChange= (e)=>{
@@ -41,7 +40,7 @@ const Signup = () => {
   <div className="mb-3 container" > 
   <div className="mb-3">
     <label htmlFor="name"className="form-label">Name</label>
-    <input type="text"className="form-control" id="name" name='name'  onChange={onChange}/>
+    <input type="name"className="form-control" id="name" name='name'  onChange={onChange}/>
   </div>
     <label htmlFor="email"className="form-label">Email address</label>
     <input type="email"className="form-control" id="email" name='email' aria-describedby="emailHelp" onChange={onChange}/>
@@ -53,10 +52,10 @@ const Signup = () => {
   </div>
   <div className="mb-3">
     <label htmlFor="password"className="form-label">ConfirmPassword</label>
-    <input type="password"className="form-control" name='cpassword' onChange={onChange} id="cpassword"/>
+    <input type="cpassword"className="form-control" name='cpassword' onChange={onChange} id="cpassword"/>
   </div>
- 
-  <button type="submit"className="btn btn-dark">Submit</button>
+
+  <button type="submit"className="btn btn-primary">Submit</button>
 </form>
   </>
   )
