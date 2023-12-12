@@ -7,7 +7,7 @@ const Login = () => {
   let navigate = useNavigate();
     const handleClick=async(e)=>{
      e.preventDefault();
-      const url= "https://inotebook-backend-hg8f.onrender.com/api/auth/login"
+      const url= "https://inotebook-xaja.onrender.com/api/auth/login"
      const response = await fetch(url, {
         method: "POST",
         headers: {

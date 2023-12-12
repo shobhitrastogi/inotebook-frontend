@@ -10,7 +10,7 @@ const Signup = () => {
   const handleClick=async(e)=>{
       const {name,email,password}=credentials
      e.preventDefault();
-     const url = 'https://inotebook-backend-hg8f.onrender.com/api/auth/createuser';
+     const url = 'https://inotebook-xaja.onrender.com/api/auth/createuser';
 
      const response = await fetch(url, {
         method: "POST",
